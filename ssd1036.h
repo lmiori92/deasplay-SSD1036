@@ -68,6 +68,8 @@
 #define HAS_CHARACTER_INTERFACE
 #define HAS_BITMAP_INTERFACE
 #define HAS_BITMAP
+/** This driver requires taxibus */
+#define TAXIBUS_REQUIRED
 
 void ssd1036_display_hal_init(void);
 void ssd1036_display_hal_power(e_deasplay_HAL_power state);

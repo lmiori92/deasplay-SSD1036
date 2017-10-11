@@ -26,9 +26,8 @@
  * @brief Display HAL to interface the APIs to the SSD1036 OLED display
  */
 
-#include "../../deasplay.h"
-
-#include "../../taxibus/interface.h"
+#include "deasplay/deasplay.h"
+#include "taxibus/interface.h"
 
 #ifdef DEASPLAY_SSD1036
 

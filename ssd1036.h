@@ -67,6 +67,7 @@
 /* Enable library features */
 #define HAS_CHARACTER_INTERFACE
 #define HAS_BITMAP_INTERFACE
+#define HAS_BITMAP
 
 void ssd1036_display_hal_init(void);
 void ssd1036_display_hal_power(e_deasplay_HAL_power state);
@@ -74,5 +75,14 @@ void ssd1036_display_hal_set_cursor(uint8_t line, uint8_t chr);
 void ssd1036_display_hal_cursor_visibility(bool visible);
 void ssd1036_set_extended(uint8_t id, uint8_t *data, uint8_t len);
 void display_hal_write_buffer(uint8_t x_rect, uint8_t y_rect);
+
+/* bindings */
+#define deasplay_hal_init               ssd1036_display_hal_init
+#define deasplay_hal_power              ssd1036_display_hal_power
+#define deasplay_hal_set_cursor         ssd1036_display_hal_set_cursor
+#define deasplay_hal_write_char         ssd1036_display_hal_write_char
+#define deasplay_hal_cursor_visibility  ssd1036_display_hal_cursor_visibility
+#define deasplay_hal_write_extended     ssd1036_write_extended
+#define deasplay_hal_set_extended       ssd1036_set_extended
 
 #endif /* DRIVER_SSD1036_SSD1036_H_ */
